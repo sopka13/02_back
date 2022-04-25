@@ -25,6 +25,11 @@ object Temp {
 		// Create select
 		val selector = Selector.open
 
+		val selectedKeys = selector.selectedKeys
+		val iter = selectedKeys.iterator
+		val ky: SelectionKey = iter.next()
+		ky.is
+
 		// Add all fd in queue
 		chanelFront.register(selector, SelectionKey.OP_ACCEPT) // add front in queue
 		chanelFlink.register(selector, SelectionKey.OP_WRITE)
